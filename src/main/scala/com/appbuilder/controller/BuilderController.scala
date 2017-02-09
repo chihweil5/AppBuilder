@@ -139,9 +139,6 @@ class BuilderController @Autowired()(githubService: GithubService, gradleService
 				status(i) = "Built"
 			}
 		}
-
-		githubInfoWrapper.setMsg(msg)
-		githubInfoWrapper.setStatus(status)
 		println("--------------------------------------------------")
 		println("projects are completed")
 		println(githubInfoWrapper.toString)

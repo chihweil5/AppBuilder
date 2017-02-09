@@ -5,28 +5,16 @@ import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 import collection.JavaConversions._
 
-class GithubInfoWrapper(var githubInfoList : java.util.List[GithubInfo], var msg : java.util.List[String], var status : java.util.List[String]) {
+class GithubInfoWrapper(var githubInfoList : java.util.List[GithubInfo]) {
 
 	def this (){
-    	this(githubInfoList = ArrayBuffer[GithubInfo](), msg = ArrayBuffer[String](), status = ArrayBuffer[String]())
+    	this(githubInfoList = ArrayBuffer[GithubInfo]())
   	}
 
-  	def getGithubInfoList() : java.util.List[GithubInfo] = githubInfoList
+  def getGithubInfoList() : java.util.List[GithubInfo] = githubInfoList
 
 	def setGithubInfoList(githubInfoList : java.util.List[GithubInfo]) {
     	this.githubInfoList = githubInfoList
-  	}
-
-  	def getMsg() : java.util.List[String] = msg
-
-  	def setMsg(msg : java.util.List[String]) {
-  		this.msg = msg
-  	}
-
-  	def getStatus() : java.util.List[String] = status
-
-  	def setStatus(status : java.util.List[String]) {
-  		this.status = status
   	}
 
 	def add(githubInfo: GithubInfo): Unit = {
@@ -34,7 +22,7 @@ class GithubInfoWrapper(var githubInfoList : java.util.List[GithubInfo], var msg
 	}
 
 	override def toString(): String = {
-		return "GithubInfoWrapper [githubInfoList=" + githubInfoList + " msg=" + msg + " status=" + status + "]"
+		return "GithubInfoWrapper [githubInfoList=" + githubInfoList + "]"
 	}
 }
 
