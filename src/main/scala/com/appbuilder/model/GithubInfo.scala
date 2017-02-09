@@ -53,7 +53,7 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
 
 	def getURL(): String = "https://github.com/" + username + "/" + reponame
 
-	def getRepoURL(): String = "https://github.com/" + username + "/" + reponame + "/.git"
+	def getRepoURL(): String = "https://github.com/" + username + "/" + reponame + ".git"
 
 	/*override def toString(): String = {
 		return "GithubInfo [userName=" + username + ", repoName=" + reponame + ", tags=" + tags + ", localpath=" + localpath + "]"
