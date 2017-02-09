@@ -1,0 +1,15 @@
+<nav role="navigation" class="navbar navbar-default">
+
+    <div class="">
+        <label class="navbar-brand">ApplicationBuilder</label>
+    </div>
+
+    <div class="navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="/ApplicationBuilder-0.0.1-SNAPSHOT/appbuilder">Clone and Build</a></li>
+            <li><a href="/ApplicationBuilder-0.0.1-SNAPSHOT/result">Meta-data Query</a></li>
+			<li><a href="/ApplicationBuilder-0.0.1-SNAPSHOT/dataquery">Build data query</a></li>
+        </ul>
+    </div>
+
+</nav>
