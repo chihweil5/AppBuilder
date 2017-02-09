@@ -101,7 +101,6 @@ class GithubService {
     }
   }
 
-  }
 }
 
 object GithubHelper {
