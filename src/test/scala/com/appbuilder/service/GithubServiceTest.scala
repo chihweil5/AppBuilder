@@ -10,7 +10,7 @@ import scala.sys.process._
 import com.appbuilder.model._
 
 
-class GithubServiceTest extends FlatSpec with Matchers with BeforeAndAfter with MockFactory{
+class GithubServiceTest extends FlatSpec with Matchers {
   // tests go here...
   val service = new GithubService
   val gradleservice = new GradleService
