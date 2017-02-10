@@ -9,24 +9,24 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
 
 	val id = GithubInfo.newIdNum
 
-  def this (username: String, reponame: String, tags: String){
-      this("No username", "No reponame", "No tags", "No localpath")
-      this.setUsername(username)
-      this.setReponame(reponame)
-      this.setTags(tags)
-      this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
-    }
+	def this (username: String, reponame: String, tags: String){
+		this("No username", "No reponame", "No tags", "No localpath")
+		this.setUsername(username)
+		this.setReponame(reponame)
+		this.setTags(tags)
+		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
+	}
 	
 	def this (username: String, reponame: String){
-    	this("No username", "No reponame", "No tags", "No localpath")
-    	this.setUsername(username)
-    	this.setReponame(reponame)
-    	this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
+		this("No username", "No reponame", "No tags", "No localpath")
+		this.setUsername(username)
+		this.setReponame(reponame)
+		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
   	}
 
 	def this (){
-      this("", "", "", "")
-    	this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
+		this("", "", "", "")
+		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
   	}
 
 	def getUsername() : String = username
@@ -35,19 +35,19 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
 	def getLocalpath() : String = localpath
 
 	def setUsername(username : String) {
-    	this.username = username
+    		this.username = username
   	}
 
   	def setReponame(reponame : String) {
-    	this.reponame = reponame
-  	}
+    		this.reponame = reponame
+	}
 
   	def setTags(tags : String) {
-    	this.tags = tags
+    		this.tags = tags
   	}
 
   	def setLocalpath(localpath : String) {
-    	this.localpath = localpath
+    		this.localpath = localpath
   	}
 
 
