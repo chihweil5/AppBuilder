@@ -29,26 +29,7 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
     	this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
     }
 
-  	def this (username: String, reponame: String, tags: String){
-  		this("No username", "No reponame", "No tags", "No localpath")
-  		this.setUsername(username)
-  		this.setReponame(reponame)
-  		this.setTags(tags)
-  		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
-  	}
-	
-  	def this (username: String, reponame: String){
-  		this("No username", "No reponame", "No tags", "No localpath")
-  		this.setUsername(username)
-  		this.setReponame(reponame)
-  		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
-    }
-
-  	def this (){
-  		this("", "", "", "")
-  		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
-    }
-
+  	
     def getId() : Int = id
   	def getUsername() : String = username
   	def getReponame() : String = reponame
@@ -69,19 +50,6 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
 
   	def setLocalpath(localpath : String) {
     	this.localpath = localpath
-  	}
-  	
-
-  	def setReponame(reponame : String) {
-    		this.reponame = reponame
-	  }
-
-  	def setTags(tags : String) {
-    		this.tags = tags
-  	}
-
-  	def setLocalpath(localpath : String) {
-    		this.localpath = localpath
   	}
 
   	def getURL(): String = "https://github.com/" + username + "/" + reponame
