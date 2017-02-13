@@ -9,6 +9,7 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
 
     val id = GithubInfo.newIdNum
 
+<<<<<<< HEAD
     def this (username: String, reponame: String, tags: String){
       this("No username", "No reponame", "No tags", "No localpath")
       this.setUsername(username)
@@ -28,6 +29,27 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
       this("", "", "", "")
     	this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
     }
+=======
+	def this (username: String, reponame: String, tags: String){
+		this("No username", "No reponame", "No tags", "No localpath")
+		this.setUsername(username)
+		this.setReponame(reponame)
+		this.setTags(tags)
+		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
+	}
+	
+	def this (username: String, reponame: String){
+		this("No username", "No reponame", "No tags", "No localpath")
+		this.setUsername(username)
+		this.setReponame(reponame)
+		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
+  	}
+
+	def this (){
+		this("", "", "", "")
+		this.setLocalpath(System.getProperty("user.dir") + "/" + reponame)
+  	}
+>>>>>>> 743c1451c5e5ffa8444a15ced307f6e326833ebd
 
     def getId() : Int = id
   	def getUsername() : String = username
@@ -35,6 +57,7 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
   	def getTags() : String = tags
   	def getLocalpath() : String = localpath
 
+<<<<<<< HEAD
   	def setUsername(username : String) {
       	this.username = username
     	}
@@ -50,6 +73,23 @@ class GithubInfo (var username: String, var reponame: String, var tags: String, 
     	def setLocalpath(localpath : String) {
       	this.localpath = localpath
     	}
+=======
+	def setUsername(username : String) {
+    		this.username = username
+  	}
+
+  	def setReponame(reponame : String) {
+    		this.reponame = reponame
+	}
+
+  	def setTags(tags : String) {
+    		this.tags = tags
+  	}
+
+  	def setLocalpath(localpath : String) {
+    		this.localpath = localpath
+  	}
+>>>>>>> 743c1451c5e5ffa8444a15ced307f6e326833ebd
 
 
   	def getURL(): String = "https://github.com/" + username + "/" + reponame

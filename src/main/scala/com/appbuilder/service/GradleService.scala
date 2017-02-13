@@ -10,7 +10,7 @@ import scala.sys.process._
 class GradleService(var errorMsg: String) {
 	
 	def this (){
-      this("")
+      		this("")
   	}
 
 	def executeGradle(path : String) : Boolean = {
@@ -34,19 +34,19 @@ class GradleService(var errorMsg: String) {
 
 		try {
 			val output = Seq("gradle", "-p", path, "assembleDebug").!!
-            println(output)
-            if(output.indexOf("FAILED") > -1) {
-            	errorMsg = "Gradle Build Failed"
-            	return false
-            }
-        } catch {
-        	case ex: Exception => { ex.printStackTrace(); ex.toString() }
-            errorMsg = "Error Message: " + ex.toString
-            return false
-        } 
+			println(output)
+			if(output.indexOf("FAILED") > -1) {
+				errorMsg = "Gradle Build Failed"
+				return false
+			}
+		} catch {
+			case ex: Exception => { ex.printStackTrace(); ex.toString() }
+			errorMsg = "Error Message: " + ex.toString
+			return false
+		} 
 		return true
 	}
-
+	
 	def getErrorMsg() : String = errorMsg
 
 	

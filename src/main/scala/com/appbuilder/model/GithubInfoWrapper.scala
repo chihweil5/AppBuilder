@@ -11,10 +11,10 @@ class GithubInfoWrapper(var githubInfoList : java.util.List[GithubInfo]) {
     	this(githubInfoList = ArrayBuffer[GithubInfo]())
   	}
 
-  def getGithubInfoList() : java.util.List[GithubInfo] = githubInfoList
+  	def getGithubInfoList() : java.util.List[GithubInfo] = githubInfoList
 
 	def setGithubInfoList(githubInfoList : java.util.List[GithubInfo]) {
-    	this.githubInfoList = githubInfoList
+    		this.githubInfoList = githubInfoList
   	}
 
 	def add(githubInfo: GithubInfo): Unit = {
