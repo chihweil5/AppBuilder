@@ -194,10 +194,16 @@ class BuilderController @Autowired()(githubService: GithubService, gradleService
 
 	@RequestMapping(value = Array("/download/{id}"), method = Array(RequestMethod.GET))
     def doDownload(request : HttpServletRequest, response : HttpServletResponse, @PathVariable("id") id: Int) : String = {
-		
-		println("downloading apk files from " + githubInfoList(id).getReponame + "...");
-		println(id)
-		val filePaths = findApkFile(githubInfoList(id).getLocalpath)
+		var g : GithubInfo = new GithubInfo
+		for(i <- 0 until githubInfoList.length) {
+			if(githubInfoList(i).getId == id) {
+				g = githubInfoList(i)
+			}
+		}
+		println("downloading apk files from " + g.getReponame + "...")
+		println(id + "/" + g.getId)
+
+		val filePaths = findApkFile(g.getLocalpath)
 		println(filePaths)
 		println(filePaths.length)
         val context : ServletContext = request.getSession().getServletContext()

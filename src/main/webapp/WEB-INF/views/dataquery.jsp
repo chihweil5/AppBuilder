@@ -45,7 +45,7 @@
 					<td id="path">${githubInfo.username}/${githubInfo.reponame}</td>
 					<td>${_Status[i.index]}</td>
 					<c:if test="${_Status[i.index] == 'Built'}">
-						<td><a class="btn btn-primary" type="submit" href="/ApplicationBuilder-0.0.1-SNAPSHOT/download/${i.index}">download ${githubInfo.reponame} apk file</a></td>
+						<td><a class="btn btn-primary" type="submit" href="/ApplicationBuilder-0.0.1-SNAPSHOT/download/${githubInfo.id}">download ${githubInfo.reponame} apk file</a></td>
 					</c:if>
 					<c:if test="${_Status[i.index] == 'Failed'}">
 						<td>fail to build ${githubInfo.reponame} apk file</td>

@@ -33,7 +33,6 @@ class GradleService(var errorMsg: String) {
 		}*/
 
 		try {
-			val command = Array("gradle", "-p", path, "assembleDebug")
 			val output = Seq("gradle", "-p", path, "assembleDebug").!!
             println(output)
             if(output.indexOf("FAILED") > -1) {
